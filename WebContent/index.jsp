@@ -25,6 +25,46 @@ body {
 <script type="text/javascript" src="flexpaper/js/jquery.js"></script>
 
 <script type="text/javascript" src="flexpaper/js/flexpaper_flash.js"></script>
+
+<script type="text/javascript">
+	// 		SwfFile :escape(fileURL),
+
+	$(document).ready(
+
+			function() {
+				// 					var    FileURL = "Request.QueryString['key'].ToString()";
+				var fileURL = "flexpaper/MyFlexPaper";
+				// 						var fileURL = $("#file").val();
+
+				var fpr = new FlexPaperViewer('flexpaper/FlexPaperViewer',
+						'viewerPlaceHolder', {
+							config : {
+
+								SwfFile : "{" + fileURL + "[*,1].swf,3}",
+								Scale : 0.8,
+								ZoomTransition : 'easeOut',
+								ZoomTime : 0.5,
+								ZoomInterval : 0.2,
+								FitPageOnLoad : false,
+								FitWidthOnLoad : true,
+								PrintEnabled : false,
+								FullScreenAsMaxWindow : true,
+								ProgressiveLoading : true,
+								MinZoomSize : 0.8,
+								MaxZoomSize : 5,
+								SearchMatchAll : false,
+							  InitViewMode : 'Portrait',
+								ViewModeToolsVisible : false,
+								ZoomToolsVisible : false,
+								NavToolsVisible : false,
+								CursorToolsVisible : false,
+								SearchToolsVisible : false,
+								localeChain : 'zh_CN'
+							}
+						});
+
+			});
+</script>
 </head>
 <body>
 	<!-- 	<div align="center" > -->
@@ -33,42 +73,6 @@ body {
 	<div align="center" id="viewerPlaceHolder"
 		style="width:100%;height:100%;display:block">努力加载中............</div>
 
-
-	<script type="text/javascript">
-		var swfName = "show";
-		$(document).ready(
-
-				function() {
-					var fpr = new FlexPaperViewer('FlexPaperViewer',
-							'viewerPlaceHolder', {
-								config : {
-									SwfFile : "{" + swfName + "[*,1].swf,2}",
-									Scale : 0.8,
-									ZoomTransition : 'easeOut',
-									ZoomTime : 0.5,
-									ZoomInterval : 0.2,
-									FitPageOnLoad : false,
-									FitWidthOnLoad : true,
-									PrintEnabled : false,
-									FullScreenAsMaxWindow : true,
-									ProgressiveLoading : true,
-									MinZoomSize : 0.8,
-									MaxZoomSize : 5,
-									SearchMatchAll : false,
-									InitViewMode : 'TwoPage',
-									ViewModeToolsVisible : false,
-									ZoomToolsVisible : false,
-									NavToolsVisible : false,
-									CursorToolsVisible : false,
-									SearchToolsVisible : false,
-									localeChain : 'zh_CN'
-								}
-							});
-
-				});
-	</script>
-
-	<!-- 	</div> -->
 
 </body>
 </html>
