@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,20 +23,16 @@ body {
 </style>
 
 <script type="text/javascript" src="flexpaper/js/jquery.js"></script>
-
 <script type="text/javascript" src="flexpaper/js/flexpaper_flash.js"></script>
-
 <script type="text/javascript">
 	// 		SwfFile :escape(fileURL),
 
 	$(document).ready(
-
 			function() {
 				// 					var    FileURL = "Request.QueryString['key'].ToString()";
 				var fileURL = "flexpaper/MyFlexPaper";
 				// 						var fileURL = $("#file").val();
-
-				var fpr = new FlexPaperViewer('flexpaper/FlexPaperViewer',
+				var fpr = new FlexPaperViewer('flexpaper/FlexPaperViewerNoPrint',
 						'viewerPlaceHolder', {
 							config : {
 
@@ -53,7 +49,7 @@ body {
 								MinZoomSize : 0.8,
 								MaxZoomSize : 5,
 								SearchMatchAll : false,
-							  InitViewMode : 'Portrait',
+							    InitViewMode : 'Portrait',
 								ViewModeToolsVisible : false,
 								ZoomToolsVisible : false,
 								NavToolsVisible : false,
@@ -66,7 +62,7 @@ body {
 			});
 </script>
 </head>
-<body>
+<body style="overflow-x:hidden;overflow-y:auto;">
 	<!-- 	<div align="center" > -->
 
 
